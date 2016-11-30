@@ -58,7 +58,7 @@ def main():
     w = open('team_stats.txt', 'w')
     with open('players.txt') as f:
         header = f.readline()
-        w.write(header + '\n')
+        w.write(header)
         for line in f:
             player = line.strip().split('\t')[0]
             if player in team_list:
