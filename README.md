@@ -8,9 +8,9 @@ Joe Pavelski
 Claude Giroux  
 Alex Ovechkin  
 ...  
-  
+
 2. Install dependencies  
-python setup.py Install  
+python setup.py install  
 
 3. Run command line  
 Example Command Line  
