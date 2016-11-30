@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib2
 import argparse
-import csv
 import re
 import time
 
