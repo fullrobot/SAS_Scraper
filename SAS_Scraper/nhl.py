@@ -7,11 +7,11 @@ import time
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--team', help='Team File', type=str,
+    parser.add_argument('-i', '--input', help='Team File', type=str,
                         required=True)
 
     args = parser.parse_args()
-    team = args.team
+    team = args.input
 
     print "Initiating program..."
     start_time = time.time()
@@ -55,7 +55,7 @@ def main():
     print "Writing output..."
     # aggregate team stats into file
     stats = []
-    w = open('SAF_team_stats.txt', 'w')
+    w = open('team_stats.txt', 'w')
     with open('players.txt') as f:
         header = f.readline()
         w.write(header + '\n')
@@ -64,7 +64,7 @@ def main():
             if player in team_list:
                 w.write(line)
     w.close()
-    print 'SAF_team_stats.txt written in %s seconds' % round((time.time() - start_time), 4)
+    print 'team_stats.txt written in %s seconds' % round((time.time() - start_time), 4)
 
 
 if __name__ == '__main__':
